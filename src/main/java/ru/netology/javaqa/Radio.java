@@ -24,7 +24,7 @@ public class Radio {
         this.currentStation = currentStation;
     }
 
-//    private int currentStation;
+   private int currentStation;
 
     public int getCurrentVolume() {
         return currentVolume;
