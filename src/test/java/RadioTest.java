@@ -5,7 +5,7 @@ import ru.netology.javaqa.Radio;
 public class RadioTest {
     @Test
     public void testingRadioStationNext() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9, 99);
         radio.setCurrentStation(9);
 
         radio.next();
@@ -14,9 +14,10 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testingRadioStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9, 99);
         radio.setCurrentStation(0);
 
         radio.setCurrentStation(9);
@@ -24,9 +25,10 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testingRadioVolume() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9, 99);
         radio.setCurrentVolume(0);
 
         radio.setCurrentVolume(100);
@@ -34,9 +36,10 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testingRadioPrev() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9, 99);
         radio.setCurrentStation(9);
 
         radio.prev();
@@ -45,33 +48,36 @@ public class RadioTest {
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testingRadioNextA() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9, 99);
         radio.setCurrentStation(6);
 
         radio.next();
 
         int expected = 8;
         int actual = radio.getCurrentStation();
-        Assertions. assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testingRadioPrevB() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9, 99);
         radio.setCurrentStation(3);
-        
+
         radio.prev();
-        
+
         int expected = 3;
         int actual = radio.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void testingNextStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(9, 99);
         radio.setCurrentStation(0);
-        
+
         radio.setCurrentStation(8);
         int expected = 9;
         int actual = radio.getCurrentStation();
